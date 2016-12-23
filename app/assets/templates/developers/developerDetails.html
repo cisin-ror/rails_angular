@@ -1,0 +1,15 @@
+
+<table class="table table-inverse">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="developer in developers">
+      <th scope="row">{{$index}}</th>
+      <td><a href="#/developer/{{developer.id}}/projects">{{developer.email}}</a></td>
+    </tr>
+  </tbody>
+</table>

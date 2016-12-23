@@ -1,0 +1,16 @@
+
+<table class="table table-inverse">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Developer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="developer in developers">
+      <td><input type="checkbox" ng-model="developer.selected" checked="checked" value={{developer.id}} /></input></td>
+      <td>{{developer.email}}</td>
+    </tr>
+  </tbody>
+</table>
+<button ng-click="assignProject()">Assing Project</button>

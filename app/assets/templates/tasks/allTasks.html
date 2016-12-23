@@ -1,0 +1,25 @@
+<div ng-init="init()">
+<table class="table table-inverse">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Task Name</th>
+      <th>Task Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="task in tasks">
+      <th scope="row">{{$index}}</th>
+      <td><a href="#/project/{{task.project_id}}/task/{{task.id}}">{{task.name}}</a></td>
+      <td>
+      <select ng-model="task.status" ng-change="changeTaskStatus(task)">
+        <option value="new_task">new_task</option>
+        <option value="inprogress">inprogress</option>
+        <option value="completed">completed</option>
+      </select>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div>

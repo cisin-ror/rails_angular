@@ -1,0 +1,39 @@
+<div admin-home ng-if="currentUser && currentUser.id">
+<div >
+<table class="table table-inverse">
+  <thead>
+     <tr >
+     <th>Status</th>
+      <th ng-repeat="(key,value) in developers" scope="row">{{currentUser.role=='admin' ? value.developer.email : value.project.name}}</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<tr>
+  	<td>New</td>
+	<td ng-repeat="value in developers">
+		<span ng-repeat="task in value.tasks.new_task">
+			{{task.name}}
+		</span>
+	</td>
+  	</tr>
+  	<tr >
+  	<td>InProgress</td>
+  		<td ng-repeat="value in developers">
+  			<span ng-repeat="task in value.tasks.inprogress">
+				{{task.name}}
+			</span>
+  		</td>
+  	</tr>
+  	<tr >
+  	<td>Done</td>
+  		<td ng-repeat="value in developers">
+  			<span ng-repeat="task in value.tasks.completed">
+			{{task.name}}
+		</span>
+  		</td>
+  	</tr>
+  </tbody>
+</table>
+<div>
+</div>
+

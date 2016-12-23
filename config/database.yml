@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: 'utf8'
+  database: db7pgm3j01i19o
+  host: ec2-54-225-79-158.compute-1.amazonaws.com"
+  username: woyepekrmwqbak
+  password: 8FF-Qx-XVBrl-7wCqscWNcBiQP
+  port: 5432
+
+production:
+  adapter: postgresql
+  encoding: 'utf8'
+  database: db7pgm3j01i19o
+  host: ec2-54-225-79-158.compute-1.amazonaws.com"
+  username: woyepekrmwqbak
+  password: 8FF-Qx-XVBrl-7wCqscWNcBiQP
+  port: 5432

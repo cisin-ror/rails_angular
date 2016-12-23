@@ -1,0 +1,15 @@
+
+<table class="table table-inverse">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Assigned Project</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="pro in projects">
+      <th scope="row">{{$index}}</th>
+      <td><a href="#/developer/{{developerId}}/project/{{pro.project.id}}">{{pro.project.name}}</a></td>
+    </tr>
+  </tbody>
+</table>

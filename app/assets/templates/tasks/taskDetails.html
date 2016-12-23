@@ -1,0 +1,16 @@
+<table class="table table-inverse">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Developer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="developer in developers">
+      <td><input type="checkbox" ng-model="developer.selected" value={{developer.id}} /></input></td>
+      <td>{{developer.email}}</td>
+    </tr>
+  </tbody>
+</table>
+<div ng-if="!developers.length" style="color: red">Current Project is not assigned to any developer</div>
+<button ng-click="assignTasks()" ng-if="developers.length">Assing Task</button>

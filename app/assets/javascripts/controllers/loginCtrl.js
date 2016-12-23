@@ -1,0 +1,3 @@
+todoApp.controller('loginCtrl',function(){
+  
+})

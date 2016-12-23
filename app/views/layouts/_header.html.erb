@@ -1,0 +1,16 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <%= link_to "Home", '/#/' , class:"navbar-brand"%>
+    <div class="navbar-header pull-right">
+    <%= link_to "My Projects", '#/developer/{{currentUser.id}}/projects' , class:"navbar-brand", "ng-if"=>"currentUser && currentUser.role!=='admin'"%>
+
+    <%= link_to "All Tasks", '#/tasks' , class:"navbar-brand", "ng-if"=>"currentUser && currentUser.role=='admin'"%>
+ 	  <%= link_to "Developers", '#/developers' , class:"navbar-brand", "ng-if"=>"currentUser && currentUser.role=='admin'"%>
+     <%= link_to "Projects", '#/projects' , class:"navbar-brand", "ng-if"=>"currentUser && currentUser.role=='admin'"%>
+      <%= link_to "Add Project", '#/projects/new' , class:"navbar-brand", "ng-if"=>"currentUser && currentUser.role=='admin'"%>
+      <%= link_to "Sign Out", 'javascript:void(0)', "ng-click"=>"logout()" ,:method => :delete, class:"navbar-brand", "ng-if"=>"currentUser"%>
+      <%= link_to "Sign In", new_user_session_path  , class:"navbar-brand", "ng-if"=>"!currentUser"%>
+      <%= link_to "Register", new_user_registration_path , class:"navbar-brand", "ng-if"=>"!currentUser"%>
+    </div>
+  </div>
+</nav>

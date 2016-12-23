@@ -1,0 +1,16 @@
+<div ng-init="init()">
+<table class="table table-inverse">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="project in projects">
+      <th scope="row">{{$index}}</th>
+      <td><a href="#/project/{{project.id}}">{{project.name}}</a></td>
+    </tr>
+  </tbody>
+</table>
+<div>
